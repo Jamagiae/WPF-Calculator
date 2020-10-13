@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="0,30,0,0" TextWrapping="Wrap" Text="Calculator" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="26" />
+        <TextBlock HorizontalAlignment="Left" Margin="263,133,0,0" TextWrapping="Wrap" Text="Number 1" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="84,133,0,0" TextWrapping="Wrap" Text="Number 2" VerticalAlignment="Top" Grid.Column="1"  FontSize="20"/>
+        <TextBox x:Name="number1" HorizontalAlignment="Left" Height="23" Margin="250,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.183,-0.144"/>
+        <TextBox x:Name="number2" HorizontalAlignment="Left" Height="23" Margin="74,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.183,-0.144" Grid.Column="1"/>
+        <TextBlock x:Name="answer" Margin="339,72,338,0" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="26" Grid.Row="1" />
+        <TextBlock x:Name="answer2" Margin="100,72,338,0" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="26" Grid.Row="1" />
+        <TextBlock x:Name="answer3" Margin="200,72,338,0" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="26" Grid.Row="1" />
+        <TextBlock x:Name="answer4" Margin="250,72,338,0" TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="26" Grid.Row="1" />
+        <Button x:Name="Submit" Grid.ColumnSpan="2" Content="Add" HorizontalAlignment="Left" Margin="366,165,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Submit_Click"/>
+        <Button x:Name="Subtraction" Content="Subtraction" HorizontalAlignment="Left" Margin="263,165,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Subtraction_Click"/>
+        <Button x:Name="Multiplication" Content="Multiplication" HorizontalAlignment="Left" Margin="84,165,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Multiplication_Click" Grid.Column="1"/>
+        <Button x:Name="Division" Content="Divison" HorizontalAlignment="Left" Margin="209,165,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Division_Click" Grid.Column="1"/>
+        <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="137,61,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Clear_Click"/>
+    </Grid>
+</Window>
